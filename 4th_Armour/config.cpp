@@ -8,8 +8,7 @@ class cfgPatches {
         units[]={};
         weapons[]={};
         requiredAddons[]={
-            "A3_Characters_F",
-            "Halo_Marine_02"
+            "A3_Characters_F"
         };
     };
 };
