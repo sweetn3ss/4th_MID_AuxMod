@@ -166,21 +166,21 @@ class CfgAmmo
 
 	// ANVIL II rockets
 	class Rocket_04_AP_F;
-	class 4th_ammo_rkt_ANVIL2: Rocket_04_AP_F
+	class 4th_rkt_ANVIL2: Rocket_04_AP_F
 	{
 
 	};
 
 	// ASGM-4 missile
 	class Missile_AGM_01_F;
-	class 4th_ammo_msl_ASGM4: Missile_AGM_01_F
+	class 4th_msl_ASGM4: Missile_AGM_01_F
 	{
 
 	};
 
 	// Scorpion ATGM
 	class M_Scalpel_AT;
-	class 4th_ammo_msl_Scorpion: M_Scalpel_AT
+	class 4th_msl_Scorpion: M_Scalpel_AT
 	{
 		
 	};
