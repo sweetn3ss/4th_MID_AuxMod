@@ -12,6 +12,10 @@ class CfgAmmo
 		class Components;
 	};
     class B_127x99_Ball;
+	class B_25mm;
+	class Rocket_04_AP_F;
+	class ACE_Hellfire_AGM114L;
+	class Missile_AGM_01_F;
     
     // 12.7x99mm (.50 bmg), M2, API-T [42g, 903m/s, <= 300mm / 550m]
     class 4th_ammo_127x99_API_T: B_127x99_Ball
@@ -33,7 +37,7 @@ class CfgAmmo
 		suppressionRadiusBulletClose = 11.2;
     };
     
-	class B_25mm;
+
     class 4th_ammo_25mm_base: B_25mm
 	{
 		suppressionRadiusBulletClose = 10.4;
@@ -42,6 +46,44 @@ class CfgAmmo
 		ace_vehicle_damage_incendiary = 0.1;
 	};
 	
+    // 25x137mm, M791, APDS-T [134g, 1345 m/s, ]
+    class 4th_ammo_25mm_APDS_T: 4th_ammo_25_base
+    {// 14mm RHA @ 45 deg, 2743.2m
+        hit = 0;
+		indirectHit = 0.0;
+		indirectHitRange = 0;
+		cost = 5;
+		ACE_damageType = "bullet";
+
+		tracerScale = 1;
+		tracerStartTime = 0.05;
+		tracerEndTime = 3;
+		
+		typicalSpeed = 0;
+		aiAmmoUsageFlags = "128 + 256 + 512";
+		suppressionRadiusHit = 12.86;
+		
+		class CamShakeFire
+		{
+			power = 15;
+			duration = 0.5;
+			frequency = 20;
+			distance = 30;
+		};
+		class CamShakePlayerFire
+		{
+			power = 1;
+			duration = 0.2;
+			frequency = 20;
+		};
+		class CamShakeHit
+		{
+			power = 3;
+			duration = 1;
+			frequency = 20;
+		};
+    };
+
 	// 25x137mm HEI-T [184g, 1100 m/s, < 0.8 mils]
     class 4th_ammo_25mm_HEI_T: 4th_ammo_25_base
     {// Penetration data NA for HEI
@@ -81,45 +123,7 @@ class CfgAmmo
 		};
     };
 
-    // 25x137mm, M791, APDS-T [134g, 1345 m/s, ]
-    class 4th_ammo_25mm_APDS_T: 4th_ammo_25_base
-    {// 14mm RHA @ 45 deg, 2743.2m
-        hit = 0;
-		indirectHit = 0.0;
-		indirectHitRange = 0;
-		cost = 5;
-		ACE_damageType = "bullet";
-
-		tracerScale = 1;
-		tracerStartTime = 0.05;
-		tracerEndTime = 3;
-		
-		typicalSpeed = 0;
-		aiAmmoUsageFlags = "128 + 256 + 512";
-		suppressionRadiusHit = 12.86;
-		
-		class CamShakeFire
-		{
-			power = 15;
-			duration = 0.5;
-			frequency = 20;
-			distance = 30;
-		};
-		class CamShakePlayerFire
-		{
-			power = 1;
-			duration = 0.2;
-			frequency = 20;
-		};
-		class CamShakeHit
-		{
-			power = 3;
-			duration = 1;
-			frequency = 20;
-		};
-    };
-    
-    class 4th_ammo_70mm_base: BulletBase
+        class 4th_ammo_70mm_base: BulletBase
 	{
 		weaponType = "cannon";
 		ACE_damageType = "shell";
@@ -165,24 +169,29 @@ class CfgAmmo
     };
 
 	// ANVIL II rockets
-	class Rocket_04_AP_F;
 	class 4th_rkt_ANVIL2: Rocket_04_AP_F
 	{
-
+		hit = 210;
+		indirectHit = 55;
+		indirectHitRange = 15;
 	};
 
 	// ASGM-4 missile
-	class Missile_AGM_01_F;
-	class 4th_msl_ASGM4: Missile_AGM_01_F
+	class 4th_msl_ASGM4: ACE_Hellfire_AGM114L
 	{
-
+		hit = 200;
+		indirectHit = 80;
+		indirectHitRange = 8;
 	};
 
 	// Scorpion ATGM
-	class M_Scalpel_AT;
-	class 4th_msl_Scorpion: M_Scalpel_AT
+	class 4th_msl_Scorpion: Missile_AGM_01_F
 	{
-		
+		hit = 1200;
+		indirectHit = 50;
+		indirectHitRange = 4;
+		laserLock = 1;
+		irLock = 0;
 	};
 };
 
