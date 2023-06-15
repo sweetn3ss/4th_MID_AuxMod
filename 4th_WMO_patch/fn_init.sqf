@@ -1,0 +1,1 @@
+DSY_WMO_MISSIONEVHID = addMissionEventHandler ["EachFrame",DSY_WMO_patch];
