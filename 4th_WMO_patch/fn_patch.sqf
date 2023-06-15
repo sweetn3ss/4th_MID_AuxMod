@@ -1,7 +1,7 @@
 if (hasInterface) then{
-		if (BW_anker != objNull) then {
-			
-		};
+	if (BW_anker != objNull) then {
+		
+	};
 };
 
 
