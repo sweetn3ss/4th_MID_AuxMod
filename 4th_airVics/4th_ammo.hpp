@@ -138,7 +138,7 @@ class CfgAmmo
 	};
 
     // 70x350mm depleted uranium rounds (1.5kg uranium content)
-    class 4th_ammo_70mm_DUAPDS_T: 4th_ammo_70x350_base { // Pen data to follow trends
+    class 4th_ammo_70mm_DUAPDS_T: 4th_ammo_70mm_base { // Pen data to follow trends
         hit = 140;
 		indirectHit = 0.0;
 		indirectHitRange = 0;
@@ -180,8 +180,8 @@ class CfgAmmo
 		indirectHitRange = 15;
 	};
 
-	// ASGM-4 missile (AtG)
-	class 4th_msl_ASGM4: ACE_Hellfire_AGM114L { 
+	// ASGM-4/G missile (AtG)
+	class 4th_msl_ASGM4_G: ACE_Hellfire_AGM114L { 
 		hit = 560;
 		indirectHit = 80;
 		indirectHitRange = 8;
@@ -189,8 +189,8 @@ class CfgAmmo
 		irLock = 1;
 	};
 	
-	// Argent V missile (AtA)
-	class 4th_msl_argentV: ammo_Missile_AMRAAM_C { 
+	// ASGM-4/A missle (AtA)
+	class 4th_msl_ASGM4_A: ammo_Missile_AMRAAM_C { 
 		
 	};
 
