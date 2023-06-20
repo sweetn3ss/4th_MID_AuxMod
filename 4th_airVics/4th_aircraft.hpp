@@ -35,7 +35,27 @@ class CfgVehicles
     class 4th_hornet:OPTRE_UNSC_hornet {
         faction = "4th_UNSC_aircraft";
         displayName = "AV-14 'Hornet'";
-    };
+		/*class Components: Components
+		{
+			class TransportPylonsComponent
+			{
+				uiPicture = "";
+				class Pylons
+				{ 
+					class PylonRight1 
+					{ // outer top
+						maxWeight = 0; //kg
+						attachment = ""; //default magazine
+						priority = 4; //higher priority  = pylon used first
+						hardpoints[] = {"Splits_T_Missiles"}; //matches to magazine hardpoints
+						turret[] = {}; //default owner of weapon, defaults to driver
+						UIposition[] = {0.25,0.1}; // x,y coordinates in Eden UI
+					};
+					class PylonLeft1
+				};
+			};
+		};*/
+	};
     class 4th_pelican:Splits_UNSC_D77_TC_Pelican {
         faction = "4th_UNSC_aircraft";
         displayName = "D77-TCI 'Pelican'";
@@ -46,15 +66,9 @@ class CfgVehicles
 				uiPicture = "\A3\Air_F_Exp\VTOL_02\Data\UI\VTOL_02_3DEN_CA.paa";
 				class Pylons
 				{ 
-					/*Loadout options are as follows:
-					L1A: 2x AA missiles
-					L1B: 1x Scorpion
-					L2A: 2x AA missiles, 2x Scorpion
-					L2B: 3x Scorpion, 2x 1000lb JDAM (GBU-16 Paveway), 1x Fuel Pod
-					R1A - R2B: Mirror L1A - L2B
-					*/
 					class PylonRight1 
-					{//remove
+					{ // outer top
+						maxWeight = 0; //kg
 						attachment = "Splits_PylonMissile_AA_Pelican_x2";
 						priority = 4;
 						hardpoints[] = {"Splits_T_Missiles"};
@@ -62,7 +76,8 @@ class CfgVehicles
 						UIposition[] = {0.25,0.1};
 					};
 					class PylonRight2
-					{
+					{ // inner top
+						maxWeight = 0;
 						attachment = "Splits_PylonMissile_AGM_Pelican_x2";
 						priority = 3;
 						hardpoints[] = {"Splits_T_Missiles"};
@@ -70,7 +85,8 @@ class CfgVehicles
 						UIposition[] = {0.25,0.2};
 					};
 					class PylonRight3
-					{
+					{ // outer bottom
+						maxWeight = 0;
 						attachment = "Splits_PylonMissile_AGM_Bottom_Pelican_x3";
 						priority = 2;
 						hardpoints[] = {"Splits_B_Missiles"};
@@ -78,7 +94,8 @@ class CfgVehicles
 						UIposition[] = {0.6,0.1};
 					};
 					class PylonRight4
-					{
+					{ // inner bottom
+						maxWeight = 0;
 						attachment = "Splits_PylonMissile_AGM_Bottom_Pelican_x3";
 						priority = 1;
 						hardpoints[] = {"Splits_B_Missiles"};
@@ -86,7 +103,7 @@ class CfgVehicles
 						UIposition[] = {0.6,0.2};
 					};
 					class PylonsLeft1: PylonRight1
-					{// remove
+					{
 						UIposition[] = {0.25,0.5};
 						mirroredMissilePos = 1;
 					};

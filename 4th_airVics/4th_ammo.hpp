@@ -36,6 +36,7 @@ class CfgAmmo
 		indirectHitRange = 0;
 		cost = 1;
 		ace_rearm_caliber = 12;
+		caliber = 1.47656; // caliber = (pen depth in mm * 1000) / velocity / 15
 		
 		tracerScale = 1;
 		tracerStartTime = 0.05;
@@ -63,6 +64,7 @@ class CfgAmmo
 		indirectHitRange = 0;
 		cost = 5;
 		ACE_damageType = "bullet";
+		caliber = 0; // caliber = (pen depth in mm * 1000) / velocity / 15
 
 		tracerScale = 1;
 		tracerStartTime = 0.05;
@@ -100,6 +102,7 @@ class CfgAmmo
 		indirectHitRange = 0;
 		cost = 1;
 		ACE_damageType = "explosive";
+		caliber = 0; // caliber = (pen depth in mm * 1000) / velocity / 15
 
 		tracerScale = 1;
 		tracerStartTime = 0.2;
@@ -131,10 +134,11 @@ class CfgAmmo
 		};
     };
 
-    class 4th_ammo_70mm_base: BulletBase {
+    class 4th_ammo_70mm_base: BulletBase { //finish ACE stuff
 		weaponType = "cannon";
 		ACE_damageType = "shell";
 		ace_rearm_caliber = 70;
+		caliber = 16.1405; // caliber = (pen depth in mm * 1000) / velocity / 15
 	};
 
     // 70x350mm depleted uranium rounds (1.5kg uranium content)
@@ -180,8 +184,8 @@ class CfgAmmo
 		indirectHitRange = 15;
 	};
 
-	// ASGM-4/G missile (AtG)
-	class 4th_msl_ASGM4_G: ACE_Hellfire_AGM114L { 
+	// ASGM-4 missile (AtG)
+	class 4th_msl_ASGM4: ACE_Hellfire_AGM114L { 
 		hit = 560;
 		indirectHit = 80;
 		indirectHitRange = 8;
@@ -189,16 +193,25 @@ class CfgAmmo
 		irLock = 1;
 	};
 	
-	// ASGM-4/A missle (AtA)
-	class 4th_msl_ASGM4_A: ammo_Missile_AMRAAM_C { 
-		
+	// ASGM-5 missle (AtA)
+	class 4th_msl_ASGM5: ammo_Missile_AMRAAM_C {
+		/*hit = 560;
+		indirectHit = 80;
+		indirectHitRange = 8;
+		laserLock = 0;
+		irLock = 1;*/
 	};
 
 	// ASGM-6 missile (antiRad)
 	class 4th_msl_ASGM6: ammo_Missile_HARM {
+		/*hit = 560;
+		indirectHit = 80;
+		indirectHitRange = 8;
+		laserLock = 0;
+		irLock = 1;*/
 	};
 
-	// Scorpion ATGM
+	// JAGM 243K 'Scorpion' (ATGM)
 	class 4th_msl_Scorpion: Missile_AGM_01_F { 
 		hit = 1200;
 		indirectHit = 50;
