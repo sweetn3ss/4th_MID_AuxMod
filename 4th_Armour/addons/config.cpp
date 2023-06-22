@@ -8,7 +8,8 @@ class cfgPatches {
         units[]={};
         weapons[]={};
         requiredAddons[]={
-            "A3_Characters_F"
+            "A3_Characters_F",
+			"Halo_marine_02"
         };
     };
 };
@@ -104,6 +105,26 @@ class cfgVehicles {
 		model="\Halo_marine_02\Halo_Marine_02_Uniform_F.p3d";
 		uniformClass="4th_uni_Rifleman_WDL";
 	};
+    class 4th_HaloInf_Rifleman_MTP: 4th_HaloInf_Rifleman_BASE
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[4th] Marine Multicam";
+		hiddenSelections[]=
+		{
+			"Camo1",
+			"Camo2",
+			"Camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\4th_Armour\Uniform\Top\4th_HaloInf_Rifleman_Top_MTP.paa",
+			"\4th_Armour\Uniform\Pants\4th_HaloInf_Rifleman_Pants_MTP.paa",
+			"\4th_Armour\Uniform\Armour\4th_HaloInf_Rifleman_Armour_MTP.paa"
+		};
+		model="\Halo_marine_02\Halo_Marine_02_Uniform_F.p3d";
+		uniformClass="4th_uni_Rifleman_MTP";
+	};
     class 4th_HaloInf_Corpsman_DES: 4th_HaloInf_Rifleman_BASE
 	{
 		scope=2;
@@ -164,7 +185,27 @@ class cfgVehicles {
 		model="\Halo_marine_02\Halo_Marine_02_Uniform_F.p3d";
 		uniformClass="4th_uni_Corpsman_WDL";
 	};
-    class 4th_HaloInf_Pilot_BLK: 4th_HaloInf_Rifleman_BASE
+    class 4th_HaloInf_Corpsman_MTP: 4th_HaloInf_Rifleman_BASE
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="[4th] Corpsman Multicam";
+		hiddenSelections[]=
+		{
+			"Camo1",
+			"Camo2",
+			"Camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\4th_Armour\Uniform\Top\4th_HaloInf_Rifleman_Top_MTP.paa",
+			"\4th_Armour\Uniform\Pants\4th_HaloInf_Rifleman_Pants_MTP.paa",
+			"\4th_Armour\Uniform\Armour\4th_HaloInf_Corpsman_Armour_MTP.paa"
+		};
+		model="\Halo_marine_02\Halo_Marine_02_Uniform_F.p3d";
+		uniformClass="4th_uni_Corpsman_MTP";
+	};
+	class 4th_HaloInf_Pilot_BLK: 4th_HaloInf_Rifleman_BASE
 	{
 		scope=2;
 		scopeArsenal=2;
@@ -359,6 +400,47 @@ class cfgWeapons {
 			mass=80;
 		};
 	};
+	class 4th_uni_Rifleman_MTP: 4th_uni_Rifleman_BASE
+	{
+		author="Mesa + Colin";
+		scope=2;
+		scopeArsenal=2;
+		allowedSlots[]={901};
+		displayName="[4th] Marine Multicam";
+		picture="\A3\characters_f\data\ui\icon_U_BasicBody_CA.paa";
+		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		hiddenSelections[]=
+		{
+			"Camo1",
+			"Camo2",
+			"Camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\4th_Armour\Uniform\Top\4th_HaloInf_Rifleman_Top_MTP.paa",
+			"\4th_Armour\Uniform\Pants\4th_HaloInf_Rifleman_Pants_MTP.paa",
+			"\4th_Armour\Uniform\Armour\4th_HaloInf_Rifleman_Armour_MTP.paa"
+		};
+		class ItemInfo: UniformItem
+		{
+			hiddenSelections[]=
+			{
+				"Camo1",
+				"Camo2",
+				"Camo3"
+			};
+			hiddenSelectionsTextures[]=
+			{
+				"\4th_Armour\Uniform\Top\4th_HaloInf_Rifleman_Top_MTP.paa",
+				"\4th_Armour\Uniform\Pants\4th_HaloInf_Rifleman_Pants_MTP.paa",
+				"\4th_Armour\Uniform\Armour\4th_HaloInf_Rifleman_Armour_MTP.paa"
+			};
+			uniformModel="-";
+			uniformClass="4th_HaloInf_Rifleman_MTP";
+			containerClass="Supply90";
+			mass=80;
+		};
+	};
 	class 4th_uni_Corpsman_DES: 4th_uni_Rifleman_BASE
 	{
 		author="Mesa + Colin";
@@ -478,6 +560,47 @@ class cfgWeapons {
 			};
 			uniformModel="-";
 			uniformClass="4th_HaloInf_Corpsman_WDL";
+			containerClass="Supply90";
+			mass=80;
+		};
+	};
+	class 4th_uni_Corpsman_MTP: 4th_uni_Rifleman_BASE
+	{
+		author="Mesa + Colin";
+		scope=2;
+		scopeArsenal=2;
+		allowedSlots[]={901};
+		displayName="[4th] Corpsman Multicam";
+		picture="\A3\characters_f\data\ui\icon_U_BasicBody_CA.paa";
+		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		hiddenSelections[]=
+		{
+			"Camo1",
+			"Camo2",
+			"Camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\4th_Armour\Uniform\Top\4th_HaloInf_Rifleman_Top_MTP.paa",
+			"\4th_Armour\Uniform\Pants\4th_HaloInf_Rifleman_Pants_MTP.paa",
+			"\4th_Armour\Uniform\Armour\4th_HaloInf_Corpsman_Armour_MTP.paa"
+		};
+		class ItemInfo: UniformItem
+		{
+			hiddenSelections[]=
+			{
+				"Camo1",
+				"Camo2",
+				"Camo3"
+			};
+			hiddenSelectionsTextures[]=
+			{
+				"\4th_Armour\Uniform\Top\4th_HaloInf_Rifleman_Top_MTP.paa",
+				"\4th_Armour\Uniform\Pants\4th_HaloInf_Rifleman_Pants_MTP.paa",
+				"\4th_Armour\Uniform\Armour\4th_HaloInf_Corpsman_Armour_MTP.paa"
+			};
+			uniformModel="-";
+			uniformClass="4th_HaloInf_Corpsman_MTP";
 			containerClass="Supply90";
 			mass=80;
 		};
@@ -829,6 +952,72 @@ class cfgWeapons {
 			};
 		};
 	};
+	class 4th_CH252_Rifleman_MTP: 4th_CH252_BASE
+	{
+		author="Mesa + Colin";
+		scope=2;
+		scopeArsenal=2;
+		displayName="[4th] CH252 Rifleman Multicam";
+		picture="\A3\characters_f\Data\UI\icon_H_Cap_blk_CA.paa";
+		model="\Halo_marine_02\Halo_Marine_02_Helmet_F.p3d";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\4th_Armour\Helmets\4th_CH252_Rifleman_Helm_MTP.paa"
+		};
+		class ItemInfo: HeadgearItem
+		{
+			mass=10;
+			uniformModel="\Halo_marine_02\Halo_Marine_02_Helmet_F.p3d";
+			allowedSlots[]={801,901,701,605};
+			modelSiWDL[]={6};
+			hiddenSelections[]=
+			{
+				"Camo1"
+			};
+			hiddenSelectionsTextures[]=
+			{
+				"\4th_Armour\Helmets\4th_CH252_Rifleman_Helm_MTP.paa"
+			};
+		};
+	};
+	class 4th_CH252_RiflemanNV_MTP: 4th_CH252_BASENV
+	{
+		author="Mesa + Colin";
+		scope=2;
+		scopeArsenal=2;
+		displayName="[4th] CH252NV Rifleman Multicam";
+		picture="\A3\characters_f\Data\UI\icon_H_Cap_blk_CA.paa";
+		model="\Halo_marine_02\Halo_Marine_02_Helmet_F.p3d";
+		hiddenSelections[]=
+		{
+			"Camo1",
+            "_Visor"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\4th_Armour\Helmets\4th_CH252_Rifleman_Helm_MTP.paa"
+		};
+		class ItemInfo: HeadgearItem
+		{
+			mass=10;
+			uniformModel="\Halo_marine_02\Halo_Marine_02_Helmet_F.p3d";
+			allowedSlots[]={801,901,701,605};
+			modelSiWDL[]={6};
+			hiddenSelections[]=
+			{
+				"Camo1",
+                "_Visor"
+			};
+			hiddenSelectionsTextures[]=
+			{
+				"\4th_Armour\Helmets\4th_CH252_Rifleman_Helm_MTP.paa"
+			};
+		};
+	};
 	class 4th_CH252_Corpsman_DES: 4th_CH252_BASE
 	{
 		author="Mesa + Colin";
@@ -1024,6 +1213,72 @@ class cfgWeapons {
 			hiddenSelectionsTextures[]=
 			{
 				"\4th_Armour\Helmets\4th_CH252_Corpsman_Helm_WDL.paa"
+			};
+		};
+	};
+	class 4th_CH252_Corpsman_MTP: 4th_CH252_BASE
+	{
+		author="Mesa + Colin";
+		scope=2;
+		scopeArsenal=2;
+		displayName="[4th] CH252 Corpsman Multicam";
+		picture="\A3\characters_f\Data\UI\icon_H_Cap_blk_CA.paa";
+		model="\Halo_marine_02\Halo_Marine_02_Helmet_F.p3d";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\4th_Armour\Helmets\4th_CH252_Corpsman_Helm_MTP.paa"
+		};
+		class ItemInfo: HeadgearItem
+		{
+			mass=10;
+			uniformModel="\Halo_marine_02\Halo_Marine_02_Helmet_F.p3d";
+			allowedSlots[]={801,901,701,605};
+			modelSiWDL[]={6};
+			hiddenSelections[]=
+			{
+				"Camo1"
+			};
+			hiddenSelectionsTextures[]=
+			{
+				"\4th_Armour\Helmets\4th_CH252_Corpsman_Helm_MTP.paa"
+			};
+		};
+	};
+	class 4th_CH252_CorpsmanNV_MTP: 4th_CH252_BASENV
+	{
+		author="Mesa + Colin";
+		scope=2;
+		scopeArsenal=2;
+		displayName="[4th] CH252NV Corpsman Multicam";
+		picture="\A3\characters_f\Data\UI\icon_H_Cap_blk_CA.paa";
+		model="\Halo_marine_02\Halo_Marine_02_Helmet_F.p3d";
+		hiddenSelections[]=
+		{
+			"Camo1",
+            "_Visor"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\4th_Armour\Helmets\4th_CH252_Corpsman_Helm_MTP.paa"
+		};
+		class ItemInfo: HeadgearItem
+		{
+			mass=10;
+			uniformModel="\Halo_marine_02\Halo_Marine_02_Helmet_F.p3d";
+			allowedSlots[]={801,901,701,605};
+			modelSiWDL[]={6};
+			hiddenSelections[]=
+			{
+				"Camo1",
+                "_Visor"
+			};
+			hiddenSelectionsTextures[]=
+			{
+				"\4th_Armour\Helmets\4th_CH252_Corpsman_Helm_MTP.paa"
 			};
 		};
 	};
