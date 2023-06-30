@@ -2,6 +2,8 @@
 // ACRE SETUP BEGIN
 [true, true] call acre_api_fnc_setupMission;
 
+// [radioClassName, presetName, channelNumber, editField, value]
+
 // 117f
 ["ACRE_PRC117F", "default", "preset_117f"] call acre_api_fnc_copyPreset;
 
