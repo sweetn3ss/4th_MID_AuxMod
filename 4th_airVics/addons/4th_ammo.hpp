@@ -182,6 +182,7 @@ class CfgAmmo
 		hit = 210;
 		indirectHit = 55;
 		indirectHitRange = 15;
+		warheadName = "HEAT";
 	};
 
 	// ASGM-4 missile (AtG)
@@ -191,24 +192,27 @@ class CfgAmmo
 		indirectHitRange = 8;
 		laserLock = 0;
 		irLock = 1;
+		warheadName = "AP";
 	};
 	
 	// ASGM-5 missle (AtA)
 	class 4th_msl_ASGM5: ammo_Missile_AMRAAM_C {
-		/*hit = 560;
+		hit = 560;
 		indirectHit = 80;
 		indirectHitRange = 8;
 		laserLock = 0;
-		irLock = 1;*/
+		irLock = 1;
+		warheadName = "HE";
 	};
 
 	// ASGM-6 missile (antiRad)
 	class 4th_msl_ASGM6: ammo_Missile_HARM {
-		/*hit = 560;
+		hit = 560;
 		indirectHit = 80;
 		indirectHitRange = 8;
 		laserLock = 0;
-		irLock = 1;*/
+		irLock = 1;
+		warheadName = "HE";
 	};
 
 	// JAGM 243K 'Scorpion' (ATGM)
@@ -218,6 +222,7 @@ class CfgAmmo
 		indirectHitRange = 4;
 		laserLock = 1;
 		irLock = 1;
+		warheadName = "TandemHeat";
 	};
 	
 	// 'Hammerfall II' GBU-28 

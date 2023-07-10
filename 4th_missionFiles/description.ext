@@ -2,12 +2,6 @@
 disableChannels[] ={{0,true,true},{1,true,true},{2,true,true}};
 respawn=3;
 respawnDelay=5;
-showCompass = 1;
-showMap = 1;
-showGPS = 1;
-showWatch = 1;
-showPad = 1;
-showRadio = 1;
 // END OF GAME ALTERING SETTINGS
 
 /* OPTIONAL
@@ -17,7 +11,6 @@ class Header
  minPlayers = 1;
  maxPlayers = 12;
 };
-*/
 
 author = ""; //those who made the mission
 loadScreen = ""; //picture shown while mission loads
@@ -25,3 +18,4 @@ onLoadName = ""; //text above picture
 onLoadMission = ""; //message to display while mission is loading
 overviewPicture = ""; //img shown when selected in mission selection
 overviewText = ""; //text shown when selected in mission selection
+*/
