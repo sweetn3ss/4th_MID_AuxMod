@@ -48,7 +48,7 @@ class CfgAmmo
 		ace_vehicle_damage_incendiary = 0.1;
 		suppressionRadiusHit = 17;
 		suppressionRadiusBulletClose = 11.2;
-    };
+    }; 
 
     class 4th_ammo_25mm_base: B_25mm {
 		suppressionRadiusBulletClose = 10.4;

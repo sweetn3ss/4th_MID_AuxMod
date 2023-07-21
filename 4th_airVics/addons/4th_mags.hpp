@@ -57,14 +57,14 @@ class CfgMagazines
         scope = 1;
     };
     //70mm DUAPDS-T
-    class 4th_270Rnd_70mm_DUAPDS_T: VehicleMagazine {
+    class 4th_130Rnd_70mm_DUAPDS_T: VehicleMagazine {
         ammo = "4th_ammo_70mm_DUAPDS_T";
-        count = 270;
+        count = 130;
         weight = 2602; // 9637 g each -> 2602 kg
         initSpeed = 1285;
         maxLeadSpeed = 20;
         muzzleImpulseFactor[] = {2.0,2.5}; //float OR {torque, force} (coefficient to actual calc)
-        tracersEvery = 4;
+        tracersEvery = 3;
         displayName = "70mm DUAPDS-T";
         descriptionShort = "";
         nameSound = "cannon"; //mGun, cannon, shell
@@ -135,6 +135,12 @@ class CfgMagazines
         displayName = "3x 'Hammerfall II' GBU-79 [4th]";
         descriptionShort = "";
         weight = 340; //250lb x 3 = 340 kg
+    };
+    class 4th_1Rnd_GBU: 4th_3Rnd_GBU {
+        count = 1;
+        displayName = "1x 'Hammerfall II' GBU-79 [4th]";
+        descriptionShort = "";
+        weight = 114; //250lb =~ 113.4 kg
     };
 
     //PYLONS

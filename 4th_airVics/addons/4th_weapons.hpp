@@ -12,10 +12,12 @@ class CfgWeapons {
     class 4th_70mm_cannon
     {};
     //missles
-    class 4th_ANVIL2_launcher
+    class 4th_ANVIL_launcher
     {};
-    class 4th_ASGM4_launcher
+    class 4th_ASGM_launcher
     {};
     class 4th_Scorpion_launcher
     {};
+    // bomber!
+    class 4th_GBU_launcher {};
 };
